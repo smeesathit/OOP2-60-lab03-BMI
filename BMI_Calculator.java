@@ -2,7 +2,8 @@
  * This program accepts weight and height, then calculates BMI.Write a description of class BMI_Calculator here.
  */
 
-import java.util.*;
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class BMI_Calculator
 {
@@ -21,6 +22,7 @@ public class BMI_Calculator
         double h = 0;
         double bmi;
         
+        DecimalFormat df = new DecimalFormat ("0.00"); // Show only 2 decimal places
         System.out.print("Enter weight in kilogram: ");
         w = scanner.nextDouble();
         System.out.print("Enter height in centimeter: ");
@@ -36,7 +38,10 @@ public class BMI_Calculator
        // Compute BMI
         h = h / 100.0;
         bmi = w / (h * h);
-        System.out.println("BMI = " + bmi);
-               
+        
+        // Show BMI
+        // System.out.println("BMI = " + bmi);
+        // Format decimal point
+        System.out.println("BMI = " + df.format(bmi)); 
     } // End main
 } // End class
