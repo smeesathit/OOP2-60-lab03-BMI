@@ -7,9 +7,6 @@ import java.text.DecimalFormat;
 
 public class BMI_Calculator
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * This is the main method
      */
